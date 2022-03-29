@@ -1,0 +1,411 @@
+
+/* Fonts style */
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('../fonts/GothamMedium.eot');
+    src: url('../fonts/GothamMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamMedium.woff2') format('woff2'),
+        url('../fonts/GothamMedium.woff') format('woff'),
+        url('../fonts/GothamMedium.ttf') format('truetype'),
+        url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('../fonts/GothamBook.eot');
+    src: url('../fonts/GothamBook.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamBook.woff2') format('woff2'),
+        url('../fonts/GothamBook.woff') format('woff'),
+        url('../fonts/GothamBook.ttf') format('truetype'),
+        url('../fonts/GothamBook.svg#GothamBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: url('../fonts/GothamLight.eot');
+    src: url('../fonts/GothamLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamLight.woff2') format('woff2'),
+        url('../fonts/GothamLight.woff') format('woff'),
+        url('../fonts/GothamLight.ttf') format('truetype'),
+        url('../fonts/GothamLight.svg#GothamLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Bodoni SvtyTwo ITC TT BookIta';
+    src: url('../fonts/BodoniSvtyTwoITCTTBookIta.eot');
+    src: url('../fonts/BodoniSvtyTwoITCTTBookIta.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BodoniSvtyTwoITCTTBookIta.woff2') format('woff2'),
+        url('../fonts/BodoniSvtyTwoITCTTBookIta.woff') format('woff'),
+        url('../fonts/BodoniSvtyTwoITCTTBookIta.ttf') format('truetype'),
+        url('../fonts/BodoniSvtyTwoITCTTBookIta.svg#BodoniSvtyTwoITCTTBookIta') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* // End Fonts style */
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; }
+
+ul{ list-style: none; }
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video { display: block; }
+
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{ border:0; }
+a,input,select,textarea{ outline:none; }
+input::-moz-focus-inner{ border:0; padding: 0; }
+
+img{ float: left; width: 100%; }
+
+/* Selection colours (easy to forget) */
+
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+a{text-decoration: none; display: inline-block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+a:hover{text-decoration: underline; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+
+html,body{  background: #ffffff; height: 100%; }
+
+/*		Default Layout 
+-------------------------------------------------------------------------------
+*/
+
+body {background: rgb(255,255,255); color: rgb(60,60,60); -webkit-text-size-adjust: 100%; -moz-text-size-adjust:100%; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; overflow-x: hidden; overflow-y:scroll;}
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing:border-box; box-sizing: border-box;}
+
+.page-wrap{  float: left; width: 100%;position: relative; min-height: 100%;}
+.hero-wrap{ float: left; width: 100%; background: url(../images/home-hero.jpg) no-repeat center center; background-size: cover; height: 100vh; position: relative}
+
+.main-header,.footer-wrap{ float: left; width: 100%; position: relative;}
+.main-header{position: absolute; left: 0; top: 1px; margin-top: -1px; z-index: 99;}
+.maing-nav{ float: left; width: 100%; padding-top: 43px; }
+.maing-nav ul{list-style: none; margin: 0; padding: 0; text-align: center;}
+.maing-nav li{display: inline-block; margin: 0  12.5px; position: relative }
+.maing-nav li a{ float: left; text-decoration: none; text-transform: uppercase;font-size: 11px;line-height: 22px; color: #ffffff;font-family: 'Gotham Book';}
+.maing-nav li:first-child{ margin-left:0px;}
+.maing-nav li a:after{ position: absolute; float: left;left: 0; bottom: 0; width: 100%; height: 1px; background: #ffffff; content: "";z-index: 10;
+ opacity: 0;}
+.maing-nav li a:hover:after,.maing-nav li.active a:after{ opacity: 1;}
+.mobi-nav{position: absolute; right: 15px; top: 15px; width: 23px; display: none;}
+.mobi-nav div{float: left; width: 23px; height: 2px; margin: 3px 0; background: #ffffff;}
+
+
+
+.caption-title-wrap{max-width: 523px; width: 100%; clear: both; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+
+.caption-title-wrap img{ float: left;width: 100%;}
+.down-arro-link{ position: absolute; width: 59px; left: 50%; bottom: 164px; margin-left: -29.5px;}
+.cape-colonial{ float: left; width: 100%; padding: 48px 0;}
+.cape-colonial-title{ margin: 0 auto; max-width: 404px; text-align: center;width: 100%; font-size: 22px; line-height: 30px; color: #676f78;font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;}
+.home-gallery-wrap{ float:left; width: 100%; }
+.home-gallery-item{ float: left; width: 50%; position: relative;}
+.home-gallery-item img{ float: left; width: 100%;}
+.home-overly{ position: absolute; left:0; top: 0;width: 100%; height: 100%; z-index: 2; background: rgba(0,0,0,.3); opacity: 1;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;transition: all .3s ease-in-out; }
+.home-overly a,.home-check-section a{ position: absolute;text-align: center;left: 50%; margin-left:-133.5px; top: 50%;margin-top: -32px; max-width: 267px;  width: 100%; border:2px solid #9BA8AF; color: #ffffff; font-size: 26px; line-height: 64px;font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;z-index: 3;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
+.home-gallery-item:hover .home-overly,.home-check-section a:hover{opacity: 1;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;transition: all .3s ease-in-out; text-decoration: none;}
+.home-check-section{ float: left; width: 100%; background: #65707A; position: relative; text-align: center;}
+.home-check-section a{ opacity: 1; position: relative; margin: 64px 0 66px; overflow: hidden; clear: both; left: auto; top: auto; bottom: auto; }
+.home-overly a:hover ,.home-check-section a:hover{text-decoration: none;}
+
+/*====================Beginning About Page=================*/
+.about-hero,.house-plans-hero{float: left; width: 100%; background: url(../images/about-hero.jpg) no-repeat center center; min-height: 664px; height: 100%; background-size: cover; position: relative;}
+
+.about-hero .caption-title-text{ position: absolute; left: 50%; top: 50%; width:100%; transform: translate(-50%,-50%);z-index: 14}
+
+.caption-title-text h1{ text-align: center; font-size: 60px; line-height: 68px; color: #ffffff;  font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic; text-transform:capitalize;}
+
+.content-section{ max-width: 1200px; width: 100%; padding: 56px 15px 71px; margin: 0 auto; clear: both; overflow: hidden;}
+.content-section.plans {padding: 56px 15px 71px;}
+.text-item{ float: left; width: 50.85470085470085%; margin: 0 4.658119658119658%;}
+.about.text-item{padding-top: 5px;}
+.text-item:nth-child(odd){margin-left: 0;}
+.text-item:nth-child(even){width: 39.82905982905983%; margin-right: 0; padding-left: 30px;}
+.about.text-item:nth-child(even){padding-left: 45px;}
+.lead-text{ float: left; width: 100%; color: #676f78; font-size: 22px; line-height: 31px;font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;}
+.text-item ul{ list-style: none; margin: 0; padding: 8px 0 0; float: left; max-width: 366px;}
+.text-item li{ float: left; width: 100%; font-size: 11px; line-height: 18px; color: #676f78; text-transform: uppercase;font-family: 'Gotham Book'; position: relative; margin: .3px 0;}
+.text-item li:before{ position: absolute; left: -39px; top:9px; content: ""; background: #E1E1E1; height: 1px; width: 30px;}
+.text-item li span{display: block; padding-top: 5px; color: #9ba8af; font-size: 12px; text-transform: capitalize;}
+.plans .text-item li{font-size: 13px;}
+.plans .text-item li:before{background: #65707a;}
+
+/*====================End About Page=================*/
+
+/* ======================= House plans ===================*/
+.house-plans-hero{background: url(../images/plans-hero.jpg) no-repeat center center; background-size: cover; min-height: 590px;}
+.plans-tab-wrap{max-width: 1200px; margin: 0 auto; clear: both; overflow: hidden; padding: 23px 15px 95px;}
+ul.tabs-nav{float: left; width: 100%; text-align: center;}
+li.tab{display: inline-block; margin: 0 10px; font-size: 19px; line-height: 25px; color: #676f78; position: relative; font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic; padding: 5px; cursor: pointer;}
+li.tab.active{color: #dfa280; border-bottom: 1px solid #dfa280;}
+li.tab:after{position: absolute; right: -14px; top: 18px; width: 8px; height: 1px; background: #676f78; content: "";}
+li.tab:last-child:after{display: none;}
+.tab-contents-wrap, .tab-content, .tab-content figure, .tab-content figure img, .tab-content .content{float: left; width: 100%;}
+.tab-contents-wrap{padding-top: 45px;}
+
+.tab-content .content{padding-top: 50px;}
+.contetn-col{float: left; width: 50%; padding-right: 115px;}
+.contetn-col h4{font-size: 22px; color: #676f78; line-height: 30px; font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;}
+.contetn-col p{font-size: 13px; color: #676f78; line-height: 20px; font-family: 'Gotham Book';  font-weight: normal; font-style: normal; padding-top: 20px;}
+.contetn-col:nth-child(even) p{font-size: 11px; line-height: 18px;}
+.contetn-col p span{color: #dfa280; text-transform: uppercase; display: block;}
+
+
+/* ======================= //End house plans ===================*/
+
+
+/*====================Beginning Gallery Page =================*/
+.gallery-hero{float: left; width: 100%; background: url(../images/gallery-banner.jpg) no-repeat 0 0; min-height: 664px; height: 100%; background-size: cover;position: relative}
+/*====================End Gallery Page=================*/
+
+/*====================Beginning Conact modal Section =================*/
+.contact-modal-section{ float:left; width: 100%; background: #ffffff; position: relative;}
+#contact-modal-section{-webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); transform: translateY(-100%);}
+.contact-modal-open #contact-modal-section{-webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); -webkit-transition: all 0.3s linear, -webkit-transform 0.6s linear; transition: all 0.1s linear, transform 0.3s linear;}
+.contact-modal-section.gellary{padding-bottom: 30px;}
+
+.modal-header-wrap{ float: left; width: 100%;margin-top: 25px; position: relative; overflow: hidden}
+.modal-logo{ margin: 0 auto; max-width: 222px; clear: both;}
+.modal-logo a{display: block;}
+.modal-logo img{ float: left; width: 100%}
+.contact-info{ position: absolute; left: 55px; top: 0; width: auto; font-size: 22px; line-height: 36px; color: #676f78;font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;}
+.close-wrap{position: absolute; right:0px; margin-right: 39px; top: 0; width: auto; }
+.close-wrap span{ float: left; padding-right: 20px; padding-top: 3px; display: inline-block;font-size: 12px; line-height: 16px; color: #676f78;font-family: 'Gotham Book'; text-transform: uppercase;}
+.contact-btn{ float: right; width: 22px;}
+.contact-btn img{ float: left; width:100%;}
+.contact-content-details{ margin: 0 auto; max-width: 910px; width: 100%; padding: 110px 15px 0 15px;}
+.contact-item-text{ float: left; max-width: 440px; width: 50%; color: #676f78}
+.contact-item-text:nth-child(2){ padding-left: 24px;}
+.contact-item-text span{ float: left; width: 100%; display: inline-block;color: #676f78; font-size: 13px; line-height: 22px;font-family: 'Gotham Medium'; font-weight: 500; font-style: normal; }
+.contact-item-text > div,.contact-item-text p,.latitude > div{ float: left; width: 100%;color: #676f78; font-size: 13px; line-height: 22px;}
+.contact-item-text dfn{ float: left;display: inline-block; margin: 0 10px 0 0; font-family: 'Gotham Light'; font-weight: 300; font-style: normal;}
+.contact-item-text a{ text-decoration: none;color: #676f78;display: inline-block;font-family: 'Gotham Light'; font-weight: 300; font-style: normal;}
+.contact-item-text p{font-family: 'Gotham Light'; font-weight: 300; font-style: normal;}
+.contact-item-text:nth-child(2) p a{ color: #dfa280}
+.latitude{ float: left; width: 100%; margin-top: 22px;}
+.modal-hero{ margin: 0 auto; max-width: 1196px; width: 100%; clear: both;padding:46px 15px 0 15px;}
+.modal-hero img{ float: left; width: 100%;}
+/*====================End Conact modal Section  =================*/
+
+/*====================Beginning Gallery Single modal Section =================*/
+.modal-single-wrap{float: left; width: 100%; position: relative; }
+.modal-single-text{ float: left; max-width: 565px; width:48.70689655172414%; padding-top: 254px }
+.modal-single-text h1{ float: left; width: 100%; font-size: 60px; line-height: 37px; color: #676f78;font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;}
+.modal-single-text p{ float: left; width: 100%; padding-top: 20px; font-size: 22px; line-height: 31px;color: #676f78;font-family: 'Bodoni SvtyTwo ITC TT BookIta'; font-weight: normal; font-style: italic;}
+
+.single-right-thumb{ position: absolute; right: 0px; top: 65px; max-width: 580px; width: 100%; z-index: 1;}
+.single-right-thumb img{ float: left; width: 100%;}
+.modal-slider-wrap{ float: left; width: 100%; 44px; clear: both}
+.modal-slider{ float: left; width: 100%; padding-bottom: 55px;}
+.slider-image{ margin: 0 auto; max-width: 1005px; width: 100%; height: 100%; padding-top: 44px; clear: both; overflow: hidden}
+.flexslider .slides,.flexslider .slides .slide{position: relative; height: 100%;}
+
+
+
+.flex-control-nav{ background: none; bottom: 0px;}
+.flex-control-paging li a.flex-active { background: #676F78;}
+.flex-control-paging li a:hover{background: #676F78;}
+
+.flex-direction-nav .flex-prev,.flex-direction-nav .flex-next{top: 0; left: 0px; position: absolute; background: none; font-size: 0; border: 0; outline: 0; height: 100%; width: 50%; padding: 0; cursor: url(../images/left-arrow.png) ,w-resize; z-index: 2}
+.flex-direction-nav .flex-next{cursor: url(../images/right-arrow.png)  ,e-resize; left: auto; right:0px; }
+.flex-direction-nav{ top: 0; width: 100%; height: 100%;}
+.flex-direction-nav .flex-disabled .flex-next{width: 100%; z-index: 2;} 
+.mobi-logo{ float: left; width: 100%; display: none;}
+.mobi-logo img{ float: left; width: 120px; }
+
+
+
+
+
+
+
+/*====================Beginning Footer Section =================*/
+.footer-section{ float: left; width: 100%; clear: both; padding: 50px 0}
+.footer-wrap .maing-nav{ padding-top: 24px;}
+.footer-wrap .maing-nav li a{ color: #676f78; border-bottom: 1px solid transparent; position: relative;}
+.footer-wrap .maing-nav li a:after{position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #676f78; content: ""; opacity: 0;}
+.footer-wrap .maing-nav li a:hover:after,.footer-wrap .maing-nav li.active a:after{opacity: 1;}
+.footer-nav{ float: left; width: 100%;}
+.footer-logo{ margin: 0 auto; width: 182px;}
+.footer-logo im{ float: left; width: 100%;}
+/*====================End Footer Section =================*/
+
+
+
+/* =======================================================================================================
+============================================ Responsive style ========================================== */
+
+/*		Mobile Layout: 320px and 480px and more but less than or equal to 767px.
+----------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    .caption-title-wrap{  max-width: 250px;}
+    .cape-colonial-title{ width: 100%; padding: 0 15px;}
+    .home-gallery-item{ width: 100%}
+    .home-overly a, .home-check-section a{ margin-left: -110px; max-width: 220px;font-size: 22px; line-height: 48px;}
+    .home-check-section a{ margin-left: 0px;}
+    
+    .main-header{  background:#65707A; min-height:50px; position: fixed;top: 1px; margin-top: -1px;}
+    .main-header .maing-nav{ display: none;padding: 25px 0 10px 0;}
+    .mobi-nav{ display: block;}
+    .caption-title-text h1{ font-size: 38px; line-height: 40px;}
+    .text-item{ width: 100%; margin: 0; padding: 0;}
+    .content-section .text-item:nth-child(2){ margin-top: 20px;}
+    
+    .contetn-col { float: none; width: 100%; padding-right: 0;}
+    .content-section.plans {padding: 56px 20px 20px 20px;}
+    .text-item:nth-child(even){ width: 100%; padding-left: 40px;}
+    .main-header .maing-nav li{ margin: 0; width: 100%; display: block; padding: 6px 0}
+    .main-header .maing-nav li a{ float: none; }
+    .mobi-logo{ display: block;padding: 19px 0 15px 15px;}
+    .plans-tab-wrap{ padding-bottom: 40px;}
+    .contact-item-text{ width: 100%;margin-top: 20px;}
+    .contact-item-text:nth-child(2){ padding: 0; }
+    .contact-info{ top: 86px;left: 15px;}
+    .close-wrap{ margin-right: 15px;}
+    .modal-logo{ max-width: 120px; margin-left: 15px;}
+    .close-wrap span{ padding-right: 9px;}
+    .modal-hero{ width: 100%; padding: 30px 15px 0 15px}
+    .contact-btn{ width:20px; min-height: 20px; }
+    .lead-text{ font-size: 18px; line-height: 26px;}
+    li.tab{ margin: 0; width: 100%;}
+    li.tab:after{ display: none}
+    .tab-content .content{ padding-top: 28px;}
+    .tab-contents-wrap.tab-content .content .contetn-col{ padding-right: 50px;}
+    .tab-contents-wrap{ padding-top: 33px;}
+    .modal-single-text{ width: 100%; max-width: 100%; padding: 30px 15px 0 15px;}
+    .modal-single-text h1{ float: none; width: 100%; font-size: 40px; line-height: 46px; text-align: center;}
+    .slider-image{ padding-top: 65px;}
+
+    .main-header .maing-nav li.active {background:#464b50;}
+    .maing-nav li a:after,.flex-control-nav{ display: none;}
+    .modal-slider-wrap{ padding-bottom: 30px;}
+    .single-right-thumb{ position: relative}
+    .about-hero, .house-plans-hero,.gallery-hero{ min-height:350px; margin-top: 54px;}
+    
+    .down-arro-link{ bottom: 60px;}
+    .content-section{padding: 25px 15px;}
+    .cape-colonial{padding: 30px 0;}
+    .footer-section{padding: 35px 0 30px;}
+    .content-section .text-item:nth-child(2){margin-top: 0; padding-top: 7px;}
+    .footer-logo{width: 150px;}
+    .text-item li:before{top: 8px;}
+    .content-section.plans,.content-section.plans{padding-top: 30px;}
+    .plans .text-item li:before{top: 10px;}
+    .contetn-col p{padding-top: 10px;}
+    .plans-tab-wrap{padding-bottom: 25px;}
+    .contact-content-details{clear: both; overflow: hidden; padding-top: 85px;}
+    
+    .flex-direction-nav{top: 50%; height: auto;}
+    .flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{width: 49px; height: 16px; background: url(../images/left-arrow.png) no-repeat center center; left: 15px; display: none;}
+    .flex-direction-nav .flex-next{background: url(../images/right-arrow.png) no-repeat center center; left: auto; right: 15px;}
+    
+    .modal-single-text h1{font-size: 26px; line-height: 32px;}
+    .modal-single-text p{font-size: 18px; line-height: 26px; padding-top: 10px;}
+    .single-right-thumb{top: 30px;}
+    .slider-image{padding-top: 30px;}
+    .modal-slider,.contact-modal-section.gellary{padding-bottom: 0;}
+    .contact-btn{width: 15px; height: 15px;}
+    .close-wrap span{padding-top: 0;}
+    
+    
+    
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .about-hero, .house-plans-hero,.gallery-hero{ min-height:200px;}
+    .down-arro-link{ bottom: 30px;}
+}
+
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    #tab-contents-wrap .content .contetn-col{ padding-right: 50px;}
+    .text-item{ margin: 0 2.658119658119658%;}
+    .close-wrap{ margin-right: 15px;}
+    .modal-logo{ max-width: 165px;}
+    .contact-info{ left: 15px;}
+    .single-right-thumb{ position: relative; float: left; width: 100%; right: auto; top: auto;padding-top: 45px; max-width: 100%;}
+    .modal-single-text{ width: 100%; max-width: 100%; padding: 30px 15px 0 15px;}
+    .modal-slider-wrap,.modal-slider{ padding-bottom: 60px;}
+    .flex-control-nav{ bottom: 0;}
+    .flex-direction-nav{top: 50%; height: auto;}
+    .flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{width: 49px; height: 16px; background: url(../images/left-arrow.png) no-repeat center center; left: 15px; display: none;}
+    .flex-direction-nav .flex-next{background: url(../images/right-arrow.png) no-repeat center center; left: auto; right: 15px;}
+    .slider-image,.single-right-thumb{padding: 45px 15px 0;}
+    .gallery-hero,.about-hero, .house-plans-hero{min-height: 550px;}
+    
+    
+}
+
+
+/*		Tablet Layout: 1024px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+	input[type="text"],input[type="submit"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    .single-right-thumb{ max-width: 460px;}
+    .modal-slider-wrap,.modal-slider{ padding-bottom: 60px;}
+    .flex-control-nav{ bottom: 0;}
+
+    .flex-direction-nav{top: 50%; height: auto;}
+    .flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{width: 49px; height: 16px; background: url(../images/left-arrow.png) no-repeat center center; left: 15px; display: none;}
+    .flex-direction-nav .flex-next{background: url(../images/right-arrow.png) no-repeat center center; left: auto; right: 15px;}
+    
+    .slider-image{max-width: 850px;}
+    .gallery-hero,.about-hero, .house-plans-hero{min-height: 450px;}
+}
+
+
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+}
+
+
+
+
+
+
+
